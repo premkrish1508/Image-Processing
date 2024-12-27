@@ -1,0 +1,23 @@
+# Reading C:/altera/90/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile D:/Code_Keshav/Code_Keshav/FA_Imply.v 
+# Load canceled
+vlog -reportprogress 300 -work work D:/Code_Keshav/Code_Keshav/FA_Imply.v
+# Model Technology ModelSim ALTERA vlog 6.4a Compiler 2008.08 Oct 22 2008
+# -- Compiling module FullAdder_Imply
+# -- Compiling module Imply
+# 
+# Top level modules:
+# 	FullAdder_Imply
+vsim -gui work.FullAdder_Imply
+# vsim -gui work.FullAdder_Imply 
+# Loading work.FullAdder_Imply
+# Loading work.Imply
+add wave -r sim:/FullAdder_Imply/*
+force -freeze sim:/FullAdder_Imply/A 1 0
+force -freeze 0sim:/FullAdder_Imply/B HiZ 0
+# Dataset not found: 0sim
+force -freeze sim:/FullAdder_Imply/Cin 1 0
+force -freeze sim:/FullAdder_Imply/A 1 0
+force -freeze sim:/FullAdder_Imply/B 0 0
+force -freeze sim:/FullAdder_Imply/Cin 1 0
+run
